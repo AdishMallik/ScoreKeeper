@@ -34,14 +34,21 @@ namespace WindowsFormsApplication2
             {
                 try
                 {
+                    Error_message er = new Error_message();
                     counter = int.Parse(this.textBox1.Text);
-                    timer1 = new System.Windows.Forms.Timer();
-                    timer1.Tick += new EventHandler(timer1_Tick);
-                    timer1.Interval = 1000; // 1 second
-                    timer1.Start();
+                    if (counter < 0) { er.show("Imagine if time can actually go backwards!");
 
-                    label2.Text = counter.ToString();
-                    flag = 0;
+                    }
+                    else
+                    {
+                        timer1 = new System.Windows.Forms.Timer();
+                        timer1.Tick += new EventHandler(timer1_Tick);
+                        timer1.Interval = 1000; // 1 second
+                        timer1.Start();
+
+                        label2.Text = counter.ToString();
+                        flag = 0;
+                    }
 
                 }
                 catch (System.FormatException)
