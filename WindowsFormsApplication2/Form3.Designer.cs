@@ -106,7 +106,7 @@
             this.Controls.Add(this.textBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form3";
-            this.Text = "RMMHS QUIZOMANIA";
+            this.Text = "Score Keeper";
             this.ResumeLayout(false);
             this.PerformLayout();
 
